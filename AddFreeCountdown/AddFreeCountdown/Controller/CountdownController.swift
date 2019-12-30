@@ -23,4 +23,24 @@ class CountdownController {
         countDowns = (try? moc.fetch(fetchRequest)) ?? []
         
     }
+    
+    //MARK: - Create
+    
+    
+    //MARK: - Modify
+    
+    //MARK: - Delete
+    func delete (countdown: Countdown) {
+        if let moc = countdown.managedObjectContext {
+            moc.delete(countdown)
+            saveToPersistentStore()
+        }
+    }
+    
+    //MARK: - Save
+    private func saveToPersistentStore () {
+        if CoreDataStack.context.hasChanges {
+            try? CoreDataStack.context.save()
+        }
+    }
 }
