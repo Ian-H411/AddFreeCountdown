@@ -25,6 +25,11 @@ class CountdownController {
     }
     
     //MARK: - Create
+    @discardableResult func createCountdown (name: String, date: Date, format: String) -> Countdown {
+    let newCountdown: Countdown = Countdown(name: name, date: date, format: format)
+        saveToPersistentStore()
+        return newCountdown
+    }
     
     
     //MARK: - Modify
