@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit.UIImage
 
 class CountdownController {
     
@@ -25,14 +26,23 @@ class CountdownController {
     }
     
     //MARK: - Create
-    @discardableResult func createCountdown (name: String, date: Date, format: String) -> Countdown {
+    @discardableResult func createCountdown (name: String, date: Date, format: String, pic: UIImage?) -> Countdown {
     let newCountdown: Countdown = Countdown(name: name, date: date, format: format)
+        newCountdown.photo = pic
         saveToPersistentStore()
         return newCountdown
     }
     
     
     //MARK: - Modify
+    func updateCountdown (countdown: Countdown, name: String, date: Date, format: String, pic: UIImage) {
+        countdown.name = name
+        countdown.date = date
+        countdown.format = format
+        countdown.photo = pic
+        saveToPersistentStore()
+    }
+    
     
     //MARK: - Delete
     func delete (countdown: Countdown) {
