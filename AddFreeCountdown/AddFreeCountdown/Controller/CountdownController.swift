@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class CountdownController {
     
@@ -15,6 +16,11 @@ class CountdownController {
     var countDowns: [Countdown]?
     
     init () {
+        let fetchRequest: NSFetchRequest<Countdown> = Countdown.fetchRequest()
+        
+        let moc = CoreDataStack.context
+        
+        countDowns = (try? moc.fetch(fetchRequest)) ?? []
         
     }
 }
