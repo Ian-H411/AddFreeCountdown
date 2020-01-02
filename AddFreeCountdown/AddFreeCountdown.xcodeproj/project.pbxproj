@@ -18,6 +18,7 @@
 		253F298B23B99E4B00F1D6DF /* Countdown+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F298A23B99E4B00F1D6DF /* Countdown+Convenience.swift */; };
 		253F298D23B9A10000F1D6DF /* CountdownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F298C23B9A10000F1D6DF /* CountdownController.swift */; };
 		253F298F23B9A9FB00F1D6DF /* CountdownListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F298E23B9A9FB00F1D6DF /* CountdownListTableViewController.swift */; };
+		25A48D1123BEB20700B72407 /* CountdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A48D1023BEB20700B72407 /* CountdownTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		253F298A23B99E4B00F1D6DF /* Countdown+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Countdown+Convenience.swift"; sourceTree = "<group>"; };
 		253F298C23B9A10000F1D6DF /* CountdownController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownController.swift; sourceTree = "<group>"; };
 		253F298E23B9A9FB00F1D6DF /* CountdownListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownListTableViewController.swift; sourceTree = "<group>"; };
+		25A48D1023BEB20700B72407 /* CountdownTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				253F297023B99C1900F1D6DF /* ViewController.swift */,
 				253F298E23B9A9FB00F1D6DF /* CountdownListTableViewController.swift */,
+				25A48D1023BEB20700B72407 /* CountdownTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25A48D1123BEB20700B72407 /* CountdownTableViewCell.swift in Sources */,
 				253F298D23B9A10000F1D6DF /* CountdownController.swift in Sources */,
 				253F298923B99D6100F1D6DF /* CoreDataStack.swift in Sources */,
 				253F297123B99C1900F1D6DF /* ViewController.swift in Sources */,
