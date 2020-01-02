@@ -22,7 +22,6 @@ class CountdownController {
         let moc = CoreDataStack.context
         
         countDowns = (try? moc.fetch(fetchRequest)) ?? []
-        
     }
     
     //MARK: - Create

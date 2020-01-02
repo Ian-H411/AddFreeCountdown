@@ -17,4 +17,10 @@ class CountdownTableViewCell: UITableViewCell {
     @IBOutlet weak var dateLabel: UILabel!
     
     @IBOutlet weak var daysLeftLabel: UILabel!
+    
+    //MARK: - Helper Functions
+    
+    func updateCell (_ countdown: Countdown) {
+        
+    }
 }
