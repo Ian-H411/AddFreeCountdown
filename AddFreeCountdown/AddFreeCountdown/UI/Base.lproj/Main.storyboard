@@ -35,13 +35,13 @@
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qLT-gS-LSW">
                                                     <rect key="frame" x="143" y="24" width="79.5" height="41"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03S-0l-Pts">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03S-0l-Pts">
                                                             <rect key="frame" x="0.0" y="0.0" width="79.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUe-1z-cTd">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUe-1z-cTd">
                                                             <rect key="frame" x="0.0" y="20.5" width="79.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1045" y="-181"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Add Countdown Table View Controller-->
         <scene sceneID="cyx-8F-yja">
             <objects>
-                <tableViewController id="1fp-OV-UxS" sceneMemberID="viewController">
+                <tableViewController id="1fp-OV-UxS" customClass="AddCountdownTableViewController" customModule="AddFreeCountdown" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="6PH-PA-2Lf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,6 +178,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQn-do-oaQ">
                                                     <rect key="frame" x="108" y="11" width="198" height="198"/>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="addButtonTapped:" destination="1fp-OV-UxS" eventType="touchUpInside" id="Gd2-Wl-wkh"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -200,6 +203,12 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="fOm-AH-JaV"/>
+                    <connections>
+                        <outlet property="addPicButton" destination="zQn-do-oaQ" id="Dyd-xO-22t"/>
+                        <outlet property="countdownImage" destination="ups-Dr-514" id="RvY-ee-2YA"/>
+                        <outlet property="datePicker" destination="Nst-Sa-fI0" id="jH5-CU-jlN"/>
+                        <outlet property="titleTextField" destination="nep-Ul-Gfc" id="xnL-KV-VXu"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xVj-e2-KCU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
