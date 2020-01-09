@@ -154,6 +154,9 @@
                                                 <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nst-Sa-fI0">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="216"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                    <date key="minimumDate" timeIntervalSinceReferenceDate="599569200">
+                                                        <!--2020-01-01 11:00:00 +0000-->
+                                                    </date>
                                                 </datePicker>
                                             </subviews>
                                         </tableViewCellContentView>
@@ -202,7 +205,15 @@
                             <outlet property="delegate" destination="1fp-OV-UxS" id="FIG-fj-wNV"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="fOm-AH-JaV"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fOm-AH-JaV">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="IMc-n1-aVA">
+                            <connections>
+                                <action selector="saveButtonTapped:" destination="1fp-OV-UxS" id="Ogg-DN-CBS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="addPicButton" destination="zQn-do-oaQ" id="Dyd-xO-22t"/>
                         <outlet property="countdownImage" destination="ups-Dr-514" id="RvY-ee-2YA"/>
