@@ -36,13 +36,18 @@ class AddCountdownTableViewController: UITableViewController {
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
-        
+        if !checkDate() {
+            return
+        }
+        guard let title = titleTextField.text, !title.isEmpty else {return}
+        CountdownController.shared.createCountdown(name: title, date: datePicker.date, format: "", pic: countdownImage.image)
+        self.navigationController?.popViewController(animated: true)
     }
     
     
     //MARK: - Helper functions
-    func checkTextFields() {
-        
+    func checkDate() -> Bool {
+        return datePicker.date > Date()
     }
     
     func camera(){
@@ -111,6 +116,7 @@ extension AddCountdownTableViewController: UIImagePickerControllerDelegate, UINa
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[.originalImage] as? UIImage{
             countdownImage.image = image
+            addPicButton.setTitle("", for: .normal)
         } else {
             print("Something went wrong")
         }

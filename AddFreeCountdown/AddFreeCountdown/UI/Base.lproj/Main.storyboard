@@ -66,7 +66,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="CountdownImage" destination="Jq7-dM-7SZ" id="zDG-ID-o9A"/>
+                                    <outlet property="countdownImage" destination="Jq7-dM-7SZ" id="zDG-ID-o9A"/>
                                     <outlet property="dateLabel" destination="PUe-1z-cTd" id="WTf-JT-Vvw"/>
                                     <outlet property="daysLeftLabel" destination="vfC-zg-Noo" id="Y3U-jc-jnI"/>
                                     <outlet property="titleLabel" destination="03S-0l-Pts" id="Nx6-E3-p3M"/>
