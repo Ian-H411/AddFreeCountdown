@@ -14,7 +14,7 @@ class CountdownController {
     
     static let shared: CountdownController = CountdownController()
     
-    var countDowns: [Countdown]?
+    var countDowns: [Countdown] = []
     
     init () {
         let fetchRequest: NSFetchRequest<Countdown> = Countdown.fetchRequest()

@@ -19,21 +19,29 @@ class CountdownListTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return CountdownController.shared.countDowns?.count ?? 0
+        return CountdownController.shared.countDowns.count
+        
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Countdown", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Countdown", for: indexPath) as? CountdownTableViewCell else {return UITableViewCell()}
+        let countDown = CountdownController.shared.countDowns[indexPath.row]
+        cell.updateCell(countDown)
         
         return cell
     }
-
+//MARK: - Actions
+    
+    @IBAction func addNewCountDownTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "addCountdown", sender: nil)
+    }
+    
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            guard let countDowns = CountdownController.shared.countDowns else {return}
-            let countdown = countDowns[indexPath.row]
+    
+            let countdown = CountdownController.shared.countDowns[indexPath.row]
             CountdownController.shared.delete(countdown: countdown)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }

@@ -17,15 +17,14 @@ class DateHelper {
     let dateFormater = DateFormatter()
     
     func dateToString(date: Date) -> String {
-        
+        dateFormater.dateStyle = .long
+        return dateFormater.string(from: date)
     }
     
-    func returnCountdown(date: Date) -> String {
-        
+    func returnCountdown(date: Date) -> Double {
+        let difference = date.distance(to: date)
+        return difference
     }
     
 }
 
-enum dateFormat {
-    
-}
