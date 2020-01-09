@@ -79,10 +79,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Tm9-za-93Q">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iT3-FW-aQg"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="iT3-FW-aQg">
+                            <connections>
+                                <action selector="addNewCountDownTapped:" destination="Zfp-AP-20U" id="o49-aQ-TYt"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="1fp-OV-UxS" kind="show" id="Hsl-Ib-Omh"/>
+                        <segue destination="1fp-OV-UxS" kind="show" identifier="addCountdown" id="Hsl-Ib-Omh"/>
                         <segue destination="jAC-qy-FvO" kind="show" id="GVU-Zr-PFR"/>
                     </connections>
                 </tableViewController>

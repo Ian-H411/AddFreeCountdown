@@ -8,8 +8,8 @@
 
 import UIKit
 
-class AddCountdownTableViewController: UITableViewController, UIPickerViewDelegate {
-
+class AddCountdownTableViewController: UITableViewController {
+    
     //MARK: - Outlets
     
     @IBOutlet weak var titleTextField: UITextField!
@@ -26,25 +26,46 @@ class AddCountdownTableViewController: UITableViewController, UIPickerViewDelega
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        titleTextField.delegate = self
+        jk
     }
-//MARK: - Actions
+    //MARK: - Actions
     
     @IBAction func addButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func saveButtonTapped(_ sender: Any) {
+        
     }
     
     
     //MARK: - Helper functions
+    func checkTextFields() {
+        
+    }
     
-
     
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-   
+        
     }
-
+    
+}
+extension AddCountdownTableViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let string = ((textField.text ?? "") + string)
+        if string.count <= 25 {
+            return true
+        } else {
+            return false
+        }
+       
+    }
 }

@@ -27,7 +27,12 @@ class CountdownListTableViewController: UITableViewController {
         
         return cell
     }
-
+//MARK: - Actions
+    
+    @IBAction func addNewCountDownTapped(_ sender: Any) {
+        self.performSegue(withIdentifier: "addCountdown", sender: nil)
+    }
+    
 
     // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
