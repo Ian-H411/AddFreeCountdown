@@ -18,6 +18,7 @@ class DateHelper {
     
     func dateToString(date: Date) -> String {
         dateFormater.dateStyle = .long
+        dateFormater.timeStyle = .short
         return dateFormater.string(from: date)
     }
     
