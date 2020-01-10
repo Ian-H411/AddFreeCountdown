@@ -16,8 +16,6 @@ class CountdownTableViewCell: UITableViewCell {
     
     @IBOutlet weak var dateLabel: UILabel!
     
-    @IBOutlet weak var daysLeftLabel: UILabel!
-    
     //MARK: - Helper Functions
     
     func updateCell (_ countdown: Countdown) {
@@ -25,14 +23,8 @@ class CountdownTableViewCell: UITableViewCell {
             countdownImage.image = image
         }
         guard let date = countdown.date else {return}
-        let secondsRemaining = DateHelper.shared.returnCountdown(date: date)
-        let minuetesRemaining = secondsRemaining / 60
-        let hoursRemaining = minuetesRemaining / 60
-        let daysRemaining = hoursRemaining / 24
-        let yearsRemaining = daysRemaining / 365
         titleLabel.text = countdown.name
         dateLabel.text = DateHelper.shared.dateToString(date:date)
-        daysLeftLabel.text = "\(yearsRemaining) Years, \(daysRemaining) days, \(hoursRemaining) hours, \(minuetesRemaining) minuetes"
         
     }
 }
