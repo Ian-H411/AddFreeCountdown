@@ -23,7 +23,7 @@ class DateHelper {
     }
     
     func returnCountdown(date: Date) -> Double {
-        let difference = date.distance(to: date)
+        let difference = Date().distance(to: date)
         return difference
     }
     

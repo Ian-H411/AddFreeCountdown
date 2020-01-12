@@ -14,6 +14,12 @@ class CountdownListTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
@@ -51,7 +57,14 @@ class CountdownListTableViewController: UITableViewController {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "toDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let destination = segue.destination as? CountdownDetailViewController {
+                    let countdown = CountdownController.shared.countDowns[indexPath.row]
+                    destination.countdownLandingPad = countdown
+                }
+            }
+        }
     }
 
 }
