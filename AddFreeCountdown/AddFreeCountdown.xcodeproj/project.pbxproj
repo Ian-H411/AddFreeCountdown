@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		253F296D23B99C1900F1D6DF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F296C23B99C1900F1D6DF /* AppDelegate.swift */; };
 		253F296F23B99C1900F1D6DF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F296E23B99C1900F1D6DF /* SceneDelegate.swift */; };
-		253F297123B99C1900F1D6DF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 253F297023B99C1900F1D6DF /* ViewController.swift */; };
 		253F297423B99C1900F1D6DF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 253F297223B99C1900F1D6DF /* Main.storyboard */; };
 		253F297723B99C1900F1D6DF /* AddFreeCountdown.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 253F297523B99C1900F1D6DF /* AddFreeCountdown.xcdatamodeld */; };
 		253F297923B99C1F00F1D6DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 253F297823B99C1F00F1D6DF /* Assets.xcassets */; };
@@ -27,7 +26,6 @@
 		253F296923B99C1900F1D6DF /* AddFreeCountdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AddFreeCountdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		253F296C23B99C1900F1D6DF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		253F296E23B99C1900F1D6DF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		253F297023B99C1900F1D6DF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		253F297323B99C1900F1D6DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		253F297623B99C1900F1D6DF /* AddFreeCountdown.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AddFreeCountdown.xcdatamodel; sourceTree = "<group>"; };
 		253F297823B99C1F00F1D6DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,7 +92,6 @@
 		253F298423B99C3500F1D6DF /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				253F297023B99C1900F1D6DF /* ViewController.swift */,
 				253F298E23B9A9FB00F1D6DF /* CountdownListTableViewController.swift */,
 				25A48D1023BEB20700B72407 /* CountdownTableViewCell.swift */,
 				25A48D1423C537E600B72407 /* AddCountdownTableViewController.swift */,
@@ -205,7 +202,6 @@
 				25A48D1123BEB20700B72407 /* CountdownTableViewCell.swift in Sources */,
 				253F298D23B9A10000F1D6DF /* CountdownController.swift in Sources */,
 				253F298923B99D6100F1D6DF /* CoreDataStack.swift in Sources */,
-				253F297123B99C1900F1D6DF /* ViewController.swift in Sources */,
 				253F297723B99C1900F1D6DF /* AddFreeCountdown.xcdatamodeld in Sources */,
 				25A48D1323BEB58500B72407 /* DateHelper.swift in Sources */,
 				253F296D23B99C1900F1D6DF /* AppDelegate.swift in Sources */,
