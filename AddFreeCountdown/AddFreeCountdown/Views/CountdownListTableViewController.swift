@@ -14,6 +14,12 @@ class CountdownListTableViewController: UITableViewController {
         super.viewDidLoad()
 
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        tableView.reloadData()
+    }
+    
 
     // MARK: - Table view data source
 
