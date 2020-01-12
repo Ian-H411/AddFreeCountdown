@@ -51,7 +51,14 @@ class CountdownListTableViewController: UITableViewController {
 
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "toDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                if let destination = segue.destination as? CountdownDetailViewController {
+                    let countdown = CountdownController.shared.countDowns[indexPath.row]
+                    destination.countdownLandingPad = countdown
+                }
+            }
+        }
     }
 
 }

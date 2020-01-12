@@ -66,6 +66,7 @@
                                     <outlet property="countdownImage" destination="Jq7-dM-7SZ" id="zDG-ID-o9A"/>
                                     <outlet property="dateLabel" destination="PUe-1z-cTd" id="WTf-JT-Vvw"/>
                                     <outlet property="titleLabel" destination="03S-0l-Pts" id="Nx6-E3-p3M"/>
+                                    <segue destination="jAC-qy-FvO" kind="show" identifier="toDetail" id="4Eh-Wb-q46"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -83,17 +84,16 @@
                     </navigationItem>
                     <connections>
                         <segue destination="1fp-OV-UxS" kind="show" identifier="addCountdown" id="Hsl-Ib-Omh"/>
-                        <segue destination="jAC-qy-FvO" kind="show" identifier="toDetail" id="GVU-Zr-PFR"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WYP-oN-h14" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="218.84057971014494" y="97.767857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Countdown Detail View Controller-->
         <scene sceneID="ixz-0o-HiP">
             <objects>
-                <viewController id="jAC-qy-FvO" sceneMemberID="viewController">
+                <viewController id="jAC-qy-FvO" customClass="CountdownDetailViewController" customModule="AddFreeCountdown" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fhq-WU-sKs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,7 +119,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-PO-ttY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Countdown" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RVY-PO-ttY">
                                         <rect key="frame" x="0.0" y="112" width="373" height="44"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="gH8-hB-sdj"/>
@@ -146,6 +146,12 @@
                         <viewLayoutGuide key="safeArea" id="Hqt-H1-jWK"/>
                     </view>
                     <navigationItem key="navigationItem" id="RIt-Ki-uFL"/>
+                    <connections>
+                        <outlet property="countdownImageLabel" destination="ICV-lc-xeb" id="3nU-RO-7aI"/>
+                        <outlet property="countdownLabel" destination="RVY-PO-ttY" id="saM-u9-CTi"/>
+                        <outlet property="dateLabel" destination="xeh-Hz-Tbl" id="HKr-En-haI"/>
+                        <outlet property="titleLabel" destination="aEH-Mc-Oem" id="Pay-qs-IXZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xF8-UW-p19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
