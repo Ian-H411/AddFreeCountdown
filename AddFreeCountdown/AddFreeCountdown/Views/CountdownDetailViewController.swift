@@ -9,7 +9,7 @@
 import UIKit
 
 class CountdownDetailViewController: UIViewController {
-
+    
     //MARK: - OUTLETS
     @IBOutlet weak var titleLabel: UILabel!
     
@@ -53,17 +53,12 @@ class CountdownDetailViewController: UIViewController {
     
     func refreshTimer(date: Date) {
         let timerInitialized = Timer(timeInterval: 1.0, repeats: true) { (_) in
-            let seconds = DateHelper.shared.returnCountdown(date: date)
-            let minuetes = seconds / 60
-            let hours = minuetes / 60
-            let days = hours / 24
-            let years = days / 365
-            let countdownAsString = "\(years) years, \(days) days, \(hours) hours, \(minuetes) mins, \(seconds) seconds."
-            self.countdownLabel.text = countdownAsString
+            
+            self.countdownLabel.text =  DateHelper.shared.returnCountdown(date: date)
         }
         timerInitialized.fire()
         timer = timerInitialized
     }
     
-
+    
 }
