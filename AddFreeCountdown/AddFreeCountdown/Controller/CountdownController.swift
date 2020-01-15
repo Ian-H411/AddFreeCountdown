@@ -28,6 +28,7 @@ class CountdownController {
     @discardableResult func createCountdown (name: String, date: Date, format: String, pic: UIImage?) -> Countdown {
     let newCountdown: Countdown = Countdown(name: name, date: date, format: format)
         newCountdown.photo = pic
+        countDowns.append(newCountdown)
         saveToPersistentStore()
         return newCountdown
     }
