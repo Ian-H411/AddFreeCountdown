@@ -5,15 +5,26 @@
 //  Created by Ian Hall on 1/14/20.
 //  Copyright © 2020 Ian Hall. All rights reserved.
 //
-
-import Foundation
-import UIKit.UIImage
+import UIKit
 
 class CountdownImage: UIImage {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        adjustBorderToCircle()
+        changeBorderColor()
     }
     
-    func add
+    func adjustBorderToCircle() {
+        
+    }
+    
+    fileprivate func changeBorderColor() {
+        
+    }
+    
+    func addGlow() {
+        
+    }
+    
 }

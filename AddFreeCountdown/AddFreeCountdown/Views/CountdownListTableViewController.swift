@@ -33,7 +33,6 @@ class CountdownListTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Countdown", for: indexPath) as? CountdownTableViewCell else {return UITableViewCell()}
         let countDown = CountdownController.shared.countDowns[indexPath.row]
         cell.updateCell(countDown)
-        
         return cell
     }
 //MARK: - Actions
