@@ -32,7 +32,7 @@ class DateHelper {
             return "Countdown complete"
         }
         let dateFormater = DateComponentsFormatter()
-        dateFormater.allowedUnits = [.year,.day,.hour,.minute,.second]
+        dateFormater.allowedUnits = [.year,.month,.day,.hour,.minute,.second]
         dateFormater.unitsStyle = .full
         return dateFormater.string(from: TimeInterval(difference)) ?? "ERROR"
     }

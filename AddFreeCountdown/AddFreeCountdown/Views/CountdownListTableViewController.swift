@@ -41,17 +41,6 @@ class CountdownListTableViewController: UITableViewController {
         self.performSegue(withIdentifier: "addCountdown", sender: nil)
     }
     
-
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-    
-            let countdown = CountdownController.shared.countDowns[indexPath.row]
-            CountdownController.shared.delete(countdown: countdown)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        }
-    }
-    
     // MARK: - Navigation
 
 
