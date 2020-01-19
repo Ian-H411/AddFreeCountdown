@@ -28,8 +28,9 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="B0r-Xt-M7i">
                                             <rect key="frame" x="20.5" y="3.5" width="373" height="125"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-dM-7SZ" customClass="CountdownImage" customModule="AddFreeCountdown" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="timer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Jq7-dM-7SZ" customClass="CountdownImage" customModule="AddFreeCountdown" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="7" width="112" height="111"/>
+                                                    <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="Jq7-dM-7SZ" secondAttribute="height" multiplier="1:1" id="8Kw-Fg-7ZO"/>
                                                     </constraints>
@@ -300,6 +301,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="timer" catalog="system" width="64" height="60"/>
     </resources>
 </document>

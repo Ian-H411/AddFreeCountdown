@@ -15,7 +15,6 @@ class CountdownImage: UIImageView {
         super.awakeFromNib()
         adjustBorderToCircle()
         changeBorderColor()
-        glow()
     }
     
     
@@ -27,25 +26,10 @@ class CountdownImage: UIImageView {
     }
     
     fileprivate func changeBorderColor() {
-        self.layer.borderColor = UIColor.yellow.cgColor
+        self.layer.borderColor = UIColor.white.cgColor
     }
     
     
     
-    func glow(){
-        var shadowRadius: CGFloat = 10
-        self.layer.shadowColor = UIColor.yellow.cgColor
-        self.layer.shadowRadius = shadowRadius
-        let timerSet = Timer(fire: Date(), interval: 1.0, repeats: true) { (_) in
-            if shadowRadius < 30 {
-                shadowRadius += 15
-            } else if shadowRadius >= 30 {
-                shadowRadius -= 15
-            }
-        }
-        timerSet.fire()
-        timer = timerSet
-        
-    }
     
 }
