@@ -23,6 +23,8 @@ class CountdownTableViewCell: UITableViewCell {
             countdownImage.image = image
         }
         guard let date = countdown.date else {return}
+        if date > Date() {
+        }
         titleLabel.text = countdown.name
         dateLabel.text = DateHelper.shared.dateToString(date:date)
         

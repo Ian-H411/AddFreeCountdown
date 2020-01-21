@@ -28,28 +28,13 @@ class DateHelper {
     }
     
      fileprivate func convertCountdownToString(difference: Double) -> String {
-        var difference = difference
         if difference < 0 {
             return "Countdown complete"
         }
-        let years = Int(difference / 31557600)
-        difference -= Double(years * 31557600)
-        let days = Int(difference / 86400)
-        difference -= Double(days * 86400)
-        let hours = Int(difference / 3600)
-        difference -= Double(difference * 3600)
-        let minutes = Int(difference / 60)
-        let seconds = difference - Double(minutes * 60)
-        
-        var countDownString: String = ""
-        if years != 0 {
-            countDownString += "\(years) years, "
-        }
-        if days != 0 {
-            countDownString += "\(days) days, "
-        }
-        countDownString += "\(hours) hours, \(minutes) minutes, \(seconds) seconds remaining"
-        return countDownString
+        let dateFormater = DateComponentsFormatter()
+        dateFormater.allowedUnits = [.year,.month,.day,.hour,.minute,.second]
+        dateFormater.unitsStyle = .full
+        return dateFormater.string(from: TimeInterval(difference)) ?? "ERROR"
     }
     
 }

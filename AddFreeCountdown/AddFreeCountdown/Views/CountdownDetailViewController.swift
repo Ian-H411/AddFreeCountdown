@@ -42,11 +42,13 @@ class CountdownDetailViewController: UIViewController {
     //MARK: - Helper Functions
     
     func initializeUI() {
-        guard let countdown = countdownLandingPad else {return}
-        guard let date = countdown.date else {return}
+        guard let countdown = countdownLandingPad,
+            let date = countdown.date else {return}
+        if let countdownImage = countdown.photo {
+            countdownImageLabel.image = countdownImage
+        }
         titleLabel.text = countdown.name
         dateLabel.text = DateHelper.shared.dateToString(date: date)
-        countdownImageLabel.image = countdown.photo
         refreshTimer(date: date)
         
     }
